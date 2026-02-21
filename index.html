@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>불교 논리-인식론학파 타임라인 — Pramāṇavāda</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Cinzel:wght@400;600&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+
+/* ═══════════════════════════════════════════
+   TOKENS
+═══════════════════════════════════════════ */
+:root {
+  --cream:        #faf8f3;
+  --cream-dark:   #f0ebe0;
+  --ink:          #1a1510;
+  --ink-mid:      #3c2f20;
+  --ink-light:    #7a6a58;
+  --indigo:       #2e3d6e;        /* 창시자 계열 */
+  --indigo-pale:  #eaecf6;
+  --amber:        #8a5c1a;        /* 선구자 */
+  --amber-pale:   #f8f0e0;
+  --sage:         #2f5c40;        /* 논서 */
+  --sage-pale:    #e6f0e8;
+  --rust:         #8a3020;        /* 주석 계열 */
+  --rust-pale:    #f6ece8;
+  --teal:         #1f6060;        /* 카슈미르 학파 */
+  --teal-pale:    #e2f0ef;
+  --violet:       #5a2e6e;        /* 종교적 학파 */
+  --violet-pale:  #f0e8f6;
+  --divider:      rgba(26,21,16,0.10);
+  --shadow-sm:    0 1px 4px rgba(26,21,16,0.06), 0 2px 12px rgba(26,21,16,0.04);
+  --shadow-md:    0 3px 10px rgba(26,21,16,0.09), 0 8px 28px rgba(26,21,16,0.06);
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'EB Garamond', 'Noto Serif KR', serif;
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding-bottom: 100px;
+  background-image:
+    radial-gradient(ellipse 70% 35% at 10% 8%,  rgba(46,61,110,0.05) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 45% at 90% 85%, rgba(138,92,26,0.05) 0%, transparent 55%);
+}
+
+/* ═══════════════════════════════════════════
+   HEADER
+═══════════════════════════════════════════ */
+.header {
+  text-align: center;
+  padding: 68px 24px 48px;
+  border-bottom: 1px solid var(--divider);
+  background: linear-gradient(180deg, rgba(234,236,246,0.45) 0%, transparent 100%);
+  position: relative;
+}
+
+.header-eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 5.5px;
+  color: var(--indigo);
+  text-transform: uppercase;
+  margin-bottom: 22px;
+  opacity: 0.8;
+}
+
+.header-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-style: normal;
+  font-variant: small-caps;
+  font-size: clamp(38px, 6.5vw, 82px);
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  line-height: 1.0;
+  margin-bottom: 10px;
+}
+
+.header-subtitle-ko {
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 500;
+  font-size: clamp(14px, 2.2vw, 20px);
+  color: var(--ink-mid);
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.header-tagline {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: 14.5px;
+  color: var(--ink-light);
+  margin-bottom: 0;
+}
+
+.header-rule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 26px auto 0;
+  max-width: 320px;
+}
+.header-rule::before, .header-rule::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--indigo), transparent);
+  opacity: 0.3;
+}
+.rule-gem {
+  width: 7px; height: 7px;
+  background: var(--indigo);
+  transform: rotate(45deg);
+  opacity: 0.45;
+  flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════════
+   LEGEND
+═══════════════════════════════════════════ */
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  padding: 24px 24px 20px;
+  border-bottom: 1px solid var(--divider);
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: var(--ink-light);
+  text-transform: uppercase;
+}
+.legend-pip {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  border: 2px solid;
+  flex-shrink: 0;
+}
+.pip-pioneer    { border-color: var(--amber);  background: var(--amber-pale); }
+.pip-founder    { border-color: var(--indigo); background: var(--indigo-pale); }
+.pip-text       { border-color: var(--sage);   background: var(--sage-pale); }
+.pip-commentator{ border-color: var(--rust);   background: var(--rust-pale); }
+.pip-kashmir    { border-color: var(--teal);   background: var(--teal-pale); }
+.pip-religious  { border-color: var(--violet); background: var(--violet-pale); }
+
+/* ═══════════════════════════════════════════
+   TIMELINE WRAPPER
+═══════════════════════════════════════════ */
+.timeline-wrap {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+}
+
+.spine {
+  position: absolute;
+  left: 50%;
+  top: 0; bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom,
+    transparent 0%, var(--divider) 3%,
+    var(--divider) 97%, transparent 100%);
+  transform: translateX(-50%);
+}
+
+/* ═══════════════════════════════════════════
+   ERA BANNER
+═══════════════════════════════════════════ */
+.period-banner {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 44px 0 6px;
+}
+.period-banner::before, .period-banner::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--divider);
+  max-width: calc(50% - 130px);
+}
+.period-banner h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  padding: 6px 20px;
+  border: 1px solid var(--divider);
+  background: var(--cream);
+  white-space: nowrap;
+}
+
+/* sub-label: lineage markers */
+.sub-label {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0 4px;
+  gap: 12px;
+}
+.sub-label .sub-inner {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border: 1px solid;
+  white-space: nowrap;
+}
+.sub-label::before, .sub-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  max-width: calc(50% - 170px);
+}
+
+/* colour variants for sub-labels */
+.sub-commentator .sub-inner  { color: var(--rust);   border-color: rgba(138,48,32,0.25);  background: var(--rust-pale); }
+.sub-commentator::before,
+.sub-commentator::after       { background: rgba(138,48,32,0.2); }
+.sub-kashmir .sub-inner       { color: var(--teal);   border-color: rgba(31,96,96,0.25);   background: var(--teal-pale); }
+.sub-kashmir::before,
+.sub-kashmir::after            { background: rgba(31,96,96,0.2); }
+.sub-religious .sub-inner     { color: var(--violet); border-color: rgba(90,46,110,0.25); background: var(--violet-pale); }
+.sub-religious::before,
+.sub-religious::after          { background: rgba(90,46,110,0.2); }
+
+/* ═══════════════════════════════════════════
+   ENTRY
+═══════════════════════════════════════════ */
+.entry {
+  display: grid;
+  grid-template-columns: 1fr 48px 1fr;
+  align-items: start;
+  margin-bottom: 6px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.entry.visible { opacity: 1; transform: translateY(0); }
+
+.node-col {
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+  position: relative;
+  z-index: 3;
+}
+.node {
+  width: 13px; height: 13px;
+  border-radius: 50%;
+  border: 2px solid;
+  background: var(--cream);
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.node:hover { transform: scale(1.5); }
+
+.node.pioneer    { border-color: var(--amber);  box-shadow: 0 0 0 3px var(--amber-pale); }
+.node.founder    { border-color: var(--indigo); box-shadow: 0 0 0 3px var(--indigo-pale); }
+.node.text       { border-color: var(--sage);   box-shadow: 0 0 0 3px var(--sage-pale); }
+.node.commentator{ border-color: var(--rust);   box-shadow: 0 0 0 3px var(--rust-pale); }
+.node.kashmir    { border-color: var(--teal);   box-shadow: 0 0 0 3px var(--teal-pale); }
+.node.religious  { border-color: var(--violet); box-shadow: 0 0 0 3px var(--violet-pale); }
+
+.entry.left .node-col::before {
+  content: '';
+  position: absolute;
+  right: 13px; top: 22px;
+  height: 1px; width: 22px;
+  background: var(--divider);
+}
+.entry.right .node-col::before {
+  content: '';
+  position: absolute;
+  left: 13px; top: 22px;
+  height: 1px; width: 22px;
+  background: var(--divider);
+}
+
+.entry.left  .card   { grid-column: 1; padding-right: 34px; }
+.entry.left  .spacer { grid-column: 3; }
+.entry.right .spacer { grid-column: 1; }
+.entry.right .card   { grid-column: 3; padding-left: 34px; }
+
+/* ═══════════════════════════════════════════
+   CARD
+═══════════════════════════════════════════ */
+.card {
+  padding: 13px 17px 11px;
+  background: #ffffff;
+  border: 1px solid var(--divider);
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(26,21,16,0.18);
+  transform: translateY(-1px);
+}
+
+/* tint by type */
+.entry.kashmir-entry   .card { background: #f6fbfb; border-color: rgba(31,96,96,0.16); }
+.entry.kashmir-entry   .card:hover { border-color: rgba(31,96,96,0.32); }
+.entry.religious-entry .card { background: #fbf7fd; border-color: rgba(90,46,110,0.16); }
+.entry.religious-entry .card:hover { border-color: rgba(90,46,110,0.32); }
+.entry.pioneer-entry   .card { background: #fdf9f3; border-color: rgba(138,92,26,0.16); }
+.entry.pioneer-entry   .card:hover { border-color: rgba(138,92,26,0.32); }
+.entry.founder-entry   .card { background: #f7f8fd; border-color: rgba(46,61,110,0.16); }
+.entry.founder-entry   .card:hover { border-color: rgba(46,61,110,0.32); }
+
+.card-date {
+  font-family: 'Cinzel', serif;
+  font-size: 8.5px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1px;
+}
+.date-pioneer    { color: var(--amber); }
+.date-founder    { color: var(--indigo); }
+.date-text       { color: var(--sage); }
+.date-commentator{ color: var(--rust); }
+.date-kashmir    { color: var(--teal); }
+.date-religious  { color: var(--violet); }
+
+.card-date-note {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: 11px;
+  color: var(--ink-light);
+  margin-bottom: 4px;
+  opacity: 0.7;
+}
+
+.card-name {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: 1px;
+  letter-spacing: 0.01em;
+}
+
+.card-name-ko {
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 400;
+  font-size: 11px;
+  color: var(--ink-mid);
+  margin-bottom: 6px;
+  opacity: 0.75;
+}
+
+.card-type-badge {
+  display: inline-block;
+  font-family: 'Cinzel', serif;
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 1px;
+  margin-bottom: 6px;
+  border: 1px solid;
+}
+.badge-pioneer    { background: var(--amber-pale);  color: var(--amber);  border-color: rgba(138,92,26,0.25); }
+.badge-founder    { background: var(--indigo-pale); color: var(--indigo); border-color: rgba(46,61,110,0.25); }
+.badge-text       { background: var(--sage-pale);   color: var(--sage);   border-color: rgba(47,92,64,0.25); }
+.badge-commentator{ background: var(--rust-pale);   color: var(--rust);   border-color: rgba(138,48,32,0.25); }
+.badge-kashmir    { background: var(--teal-pale);   color: var(--teal);   border-color: rgba(31,96,96,0.25); }
+.badge-religious  { background: var(--violet-pale); color: var(--violet); border-color: rgba(90,46,110,0.25); }
+
+.card-desc {
+  font-family: 'EB Garamond', serif;
+  font-size: 13.5px;
+  line-height: 1.72;
+  color: var(--ink-mid);
+  display: none;
+  margin-top: 5px;
+  border-top: 1px solid var(--divider);
+  padding-top: 8px;
+}
+.card.open .card-desc { display: block; }
+
+.card-toggle {
+  font-family: 'Cinzel', serif;
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  color: var(--ink-light);
+  margin-top: 5px;
+  opacity: 0.55;
+  transition: opacity 0.15s;
+}
+.card:hover .card-toggle { opacity: 1; }
+.card.open .card-toggle { opacity: 1; }
+
+.spacer { display: block; }
+
+/* ═══════════════════════════════════════════
+   FOOTNOTE
+═══════════════════════════════════════════ */
+.footnote {
+  max-width: 660px;
+  margin: 60px auto 0;
+  padding: 24px 24px 0;
+  text-align: center;
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--ink-light);
+  line-height: 1.85;
+  border-top: 1px solid var(--divider);
+}
+
+/* ═══════════════════════════════════════════
+   MOBILE
+═══════════════════════════════════════════ */
+@media (max-width: 620px) {
+  .spine { left: 22px; }
+  .entry { grid-template-columns: 36px 1fr !important; }
+  .entry .node-col  { grid-column: 1 !important; }
+  .entry .card      { grid-column: 2 !important; padding-left: 14px !important; padding-right: 10px !important; }
+  .entry .spacer    { display: none !important; }
+  .entry .node-col::before { display: none !important; }
+  .period-banner::before, .period-banner::after { display: none; }
+  .sub-label::before, .sub-label::after { display: none; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ═══════ HEADER ═══════ -->
+<header class="header">
+  <p class="header-eyebrow">Pramāṇavāda · c. 4th – 9th Century CE</p>
+  <h1 class="header-title">논리-인식론학파</h1>
+  <span class="header-subtitle-ko">Buddhist Logico-Epistemological School</span>
+  <p class="header-tagline">量論 — 올바른 인식의 수단과 형식에 관한 탐구</p>
+  <div class="header-rule"><div class="rule-gem"></div></div>
+</header>
+
+<!-- ═══════ LEGEND ═══════ -->
+<div class="legend">
+  <div class="legend-item"><div class="legend-pip pip-pioneer"></div> 선구자</div>
+  <div class="legend-item"><div class="legend-pip pip-founder"></div> 창시자 / 완성자</div>
+  <div class="legend-item"><div class="legend-pip pip-text"></div> 핵심 논서</div>
+  <div class="legend-item"><div class="legend-pip pip-commentator"></div> 주석가 계보</div>
+  <div class="legend-item"><div class="legend-pip pip-kashmir"></div> 카슈미르 학파</div>
+  <div class="legend-item"><div class="legend-pip pip-religious"></div> 종교적 학파</div>
+</div>
+
+<!-- ═══════ TIMELINE ═══════ -->
+<div class="timeline-wrap">
+  <div class="spine"></div>
+  <div id="entries"></div>
+</div>
+
+<p class="footnote">
+  각 항목을 클릭하면 상세 설명이 펼쳐집니다.<br>
+  연대는 Stanford Encyclopedia of Philosophy · Wikipedia · Encyclopedia of Buddhism ·
+  EAST database (Vienna Academy) 등을 기반으로
+  학계 통설을 따랐습니다.
+</p>
+
+<script>
+const data = [
+
+  /* ══════════════════════════════════
+     I. 선구자
+  ══════════════════════════════════ */
+  {
+    era: "선구자 · Precursor — c. 4th–5th Century CE",
+    sublabel: null,
+    entries: [
+      {
+        date: "c. 316–396 CE",
+        dateNote: "일부 학자: 4세기 후반 ~ 5세기 초",
+        name: "Vasubandhu",
+        nameKo: "세친(世親)",
+        type: "pioneer", side: "left",
+        desc: "논리-인식론학파의 직접적 선구자. 《바다비디(Vādavidhi, 논의방법)》·《바다비다나(Vādavidhāna)》 등 논리학·논쟁론 저술로 Dignāga에게 직접적 영향. 당시 불교 내에서 인식론적 사유의 기초를 닦음. 추론(anumāna)과 지각(pratyakṣa)을 중심에 놓는 방향성을 선취. 전통적으로 Dignāga의 스승으로 전함 (직접 사사 여부는 학자마다 이견)."
+      },
+      {
+        date: "c. 4세기 후반",
+        dateNote: null,
+        name: "Vādavidhi / Vādavidhāna",
+        nameKo: "논의방법론",
+        type: "text", side: "right",
+        desc: "세친 저작. 논쟁(vāda)의 형식과 규칙을 다루는 초기 논리학 논서. 이 저술이 Dignāga의 관심을 촉발한 것으로 여겨짐. 현재 산스크리트 원본은 소실되고 티베트어 역본 단편만 전해짐. 불교 내에서 논리학을 독립된 연구 분야로 발전시키는 출발점."
+      },
+    ]
+  },
+
+  /* ══════════════════════════════════
+     II. 창시
+  ══════════════════════════════════ */
+  {
+    era: "창시 · Foundation — c. 480–560 CE",
+    sublabel: null,
+    entries: [
+      {
+        date: "c. 480–540 CE",
+        dateNote: "Wikipedia · Britannica · Routledge 통일 연대",
+        name: "Dignāga",
+        nameKo: "진나(陳那) · 디그나가",
+        type: "founder", side: "right",
+        desc: "불교 논리-인식론학파의 창시자. 남인도 카치(Kāñcī) 인근 출신. 세친(Vasubandhu) 사사. 《집량론(Pramāṇasamuccaya, 量集論)》으로 지각·추론만을 유일한 올바른 인식 수단으로 확정하고 불교 논리학의 체계를 완성. '배제론(apoha)' — 언어는 긍정적 지시가 아니라 타자의 부정을 통해 의미를 갖는다는 의미론 이론 — 을 도입. 인도 철학사 전반에 '인식론적 전환'을 촉발. 조르주 드레이퓌스에 따르면 '불교 논리·인식론의 표준적 정식화'를 확립한 인물."
+      },
+      {
+        date: "c. 480–540 CE",
+        dateNote: null,
+        name: "Pramāṇasamuccaya",
+        nameKo: "집량론(集量論)",
+        type: "text", side: "left",
+        desc: "Dignāga의 주저(主著). 6장으로 구성된 방대한 인식론 논서. 1장: 지각론(pratyakṣa) — 지각을 '분별구성(vikalpa) 없는 인식'으로 정의. 2장: 추론론(svārthānumāna) — 자기 자신을 위한 추론. 3장: 타자를 위한 추론과 삼지작법(trairūpya). 4장: 예증(dṛṣṭānta). 5장: 아포하(apoha) 의미론. 6장: 논쟁론. 산스크리트 원본은 소실; Jinendrabuddhi 주석에 내장된 형태로 부분 복원 가능. 티베트어 완역 현존."
+      },
+      {
+        date: "c. 480–540 CE",
+        dateNote: null,
+        name: "Nyāyamukha / Ālambanaparīkṣā",
+        nameKo: "인명정리문론(因明正理門論) / 관소연론(觀所緣論)",
+        type: "text", side: "right",
+        desc: "Dignāga의 초기·중기 저작들. 《인명정리문론(Nyāyamukha)》은 삼지작법 논리를 체계화한 짧은 입문서로 현장 한역(漢譯)으로 전해짐. 《관소연론(Ālambanaparīkṣā)》은 지각의 대상(ālambana)을 분석하여 외부 대상의 독립적 실재를 부정하고 의식의 자기인식을 옹호. 유가행파적 인식론과 논리학의 교차점."
+      },
+      {
+        date: "c. 540–600 CE",
+        dateNote: "Dignāga 제자, Dharmakīrti 스승 — 직접 사사 여부는 학자 이견",
+        name: "Īśvarasena",
+        nameKo: "이슈바라세나",
+        type: "pioneer", side: "left",
+        desc: "Dignāga의 직접 제자이자 Dharmakīrti의 스승. Dharmakīrti의 《프라마나바르티카》는 그 곳곳에서 이슈바라세나의 《집량론》 주석에 대한 비판적 응답을 담고 있음 (SEP, Hattori 1968). 특히 Dharmakīrti가 '확실성(niścaya)'을 강조하게 된 것은 이슈바라세나의 해석에 대한 반응으로 형성됨. 그 자신의 저작은 현재 소실."
+      },
+    ]
+  },
+
+  /* ══════════════════════════════════
+     III. 완성
+  ══════════════════════════════════ */
+  {
+    era: "완성 · Systematization — c. 600–670 CE",
+    sublabel: null,
+    entries: [
+      {
+        date: "c. 600–660 CE",
+        dateNote: "Frauwallner 정설; 일부 학자 550–610설 제기 (SEP)",
+        name: "Dharmakīrti",
+        nameKo: "법칭(法稱) · 다르마키르티",
+        type: "founder", side: "right",
+        desc: "논리-인식론학파의 완성자이자 최고봉. 남인도 출신 브라만 가문. 이슈바라세나에게 수학 후 나란다에서 활동. 법칭의 '7론(七論)': ①《프라마나바르티카》②《프라마나비니샤야》③《냐야빈두》④《헤투빈두》⑤《샘반다파리크샤》⑥《상타나타라싯디》⑦《바다냐야》. 핵심 혁신: (1) 인식의 인과적 효력(arthakriyā)을 올바른 인식의 기준으로 도입, (2) 자기인식(svasaṃvedana) 이론 심화, (3) 보편개념 비판(apoha 재해석), (4) 찰나생멸(kṣaṇabhańga) 논증 강화. 티베트에서 현재까지 논리학 교과서로 연구됨."
+      },
+      {
+        date: "c. 600–660 CE",
+        dateNote: null,
+        name: "Pramāṇavārttika",
+        nameKo: "프라마나바르티카 (量評釋)",
+        type: "text", side: "left",
+        desc: "법칭 최대의 저작. Dignāga의 《집량론》에 대한 비판적·심화적 주석이자 독자 철학의 완전한 전개. 4장 구성: 1장(추론론) · 2장(붓다의 인식론적 권위 증명) · 3장(지각론) · 4장(논리적 이유의 타당성 조건). 특히 2장은 붓다를 '올바른 인식의 근거(pramāṇabhūta)'로 논증하는 불교 철학적 핵심. Devendrabuddhi·Śākyabuddhi·Prajñākaragupta·Manorathanandin 등 수많은 주석 파생. 티베트 불교 논리학의 표준 교재."
+      },
+      {
+        date: "c. 600–660 CE",
+        dateNote: null,
+        name: "Nyāyabindu & Hetubindu",
+        nameKo: "냐야빈두 (正理一滴論) · 헤투빈두 (因一滴論)",
+        type: "text", side: "right",
+        desc: "법칭의 입문서·논리학 소론(小論). 《냐야빈두》: 지각과 추론의 이론을 간결하게 압축한 논리학 입문서. 이후 Dharmottara의 주요 주석 대상. 산스크리트 원본 현존. 《헤투빈두》: 추론의 '이유(hetu)'가 갖춰야 할 조건, 부정적 인식(anupalabdhi) 등 논리학의 세부 문제를 다룸. 이후 Arcaṭa의 주석 대상."
+      },
+    ]
+  },
+
+  /* ══════════════════════════════════
+     IV. 초기 주석 계보
+  ══════════════════════════════════ */
+  {
+    era: null,
+    sublabel: "초기 주석 계보 · First-Generation Commentators — c. 650–750 CE",
+    sublabelType: "commentator",
+    entries: [
+      {
+        date: "c. 675 CE (fl.)",
+        dateNote: "법칭의 직접 제자 — Encyclopedia of Buddhism",
+        name: "Devendrabuddhi",
+        nameKo: "데벤드라붓디 (天王覺)",
+        type: "commentator", side: "left",
+        desc: "법칭의 직접 제자이자 최초의 공식 주석가. 티베트 이름: lha dbang blo. 법칭에게 7론 전체에 주석을 쓰도록 위임받음. 법칭 자신의 자주(svavṛtti)를 1장으로 삼아 자신의 해설을 이어 붙인 《프라마나바르티카판지카(Pramāṇavārttikapañjikā)》 저술. 이후 샤캬붓디에게 계승. 정통 주석 계보의 출발점."
+      },
+      {
+        date: "c. 660–720 CE",
+        dateNote: "Frauwallner 1961 — EAST database (Vienna Academy)",
+        name: "Śākyabuddhi",
+        nameKo: "샤캬붓디 (釋迦覺)",
+        type: "commentator", side: "right",
+        desc: "데벤드라붓디의 제자. 티베트 이름: śākya blo. 《프라마나바르티카티카(Pramāṇavārttikaṭīkā)》 저술로 데벤드라붓디의 주석을 더욱 상세히 전개. 이후 Prabhābuddhi에게 전승. 초기 법칭 주석 계보의 제2세대를 형성하며 티베트 전통에도 직접 영향."
+      },
+      {
+        date: "7–8세기",
+        dateNote: "연대 불확실",
+        name: "Jinendrabuddhi",
+        nameKo: "지넨드라붓디",
+        type: "commentator", side: "left",
+        desc: "Dignāga의 《집량론(Pramāṇasamuccaya)》에 대한 주석 《비샬라마라바티(Viśālāmalavatī, Pramāṇasamuccayaṭīkā)》를 저술. 이 주석은 현재 소실된 《집량론》 산스크리트 원본 텍스트를 내장하고 있어 현대 학자들이 《집량론》 원본 복원에 활용. 《집량론》의 사상을 법칭 이후 관점에서 해설한 중요한 문헌."
+      },
+      {
+        date: "c. 650–750 CE",
+        dateNote: "Encyclopedia of Buddhism",
+        name: "Śubhagupta",
+        nameKo: "슈바굽타",
+        type: "commentator", side: "right",
+        desc: "바이바시카(說一切有部, Vaibhāṣika) 입장에서 논리-인식론 전통에 참여한 특이한 인물. 외부 세계의 객관적 실재를 논증하는 《바히야르타싯디(Bāhyārthasiddhi)》를 저술하여 비즈냐나바다(識論, Vijñānavāda) 이상주의를 반박. 주석 계보 내의 실재론적 목소리로 이후 논쟁을 자극."
+      },
+      {
+        date: "8세기",
+        dateNote: null,
+        name: "Vinītadeva",
+        nameKo: "비니타데바",
+        type: "commentator", side: "left",
+        desc: "법칭의 《냐야빈두(Nyāyabindu)》와 《헤투빈두(Hetubindu)》에 주석을 저술. 비교적 짧고 명료한 설명으로 입문적 역할. 《프라마나바르티카》의 1장(추론론)에도 주석 존재. 8세기 법칭 텍스트의 주석 문헌이 폭발적으로 증가하는 시기의 주요 인물 중 하나."
+      },
+    ]
+  },
+
+  /* ══════════════════════════════════
+     V. 카슈미르 학파
+  ══════════════════════════════════ */
+  {
+    era: null,
+    sublabel: "카슈미르 학파 · Kashmiri School — c. 740–800 CE",
+    sublabelType: "kashmir",
+    entries: [
+      {
+        date: "c. 740–800 CE",
+        dateNote: "EAST database (Vienna Academy); Encyclopedia of Buddhism",
+        name: "Dharmottara",
+        nameKo: "다르못타라 (法最勝)",
+        type: "kashmir", side: "right",
+        desc: "카슈미르 학파의 창시자. Frauwallner에 따르면 카슈미르 왕 자야피다(Jayapīḍa, c. 751–782) 치세에 활동. 《프라마나비니샤야티카(Pramāṇaviniścayaṭīkā)》·《냐야빈두티카(Nyāyabinduṭīkā)》 등 저술. 특징: 법칭 철학을 인식론과 논리학의 독립적 체계로 해석하며 외부 대상의 실재를 인정하는 입장 취함. 산스크리트 원본으로 전해지는 유일한 저작이 《Nyāyabinduṭīkā》. 겔룩파 티베트 불교 해석에 결정적 영향."
+      },
+      {
+        date: "c. 740–800 CE",
+        dateNote: null,
+        name: "Nyāyabinduṭīkā",
+        nameKo: "냐야빈두주석 (正理一滴論疏)",
+        type: "text", side: "left",
+        desc: "Dharmottara의 법칭 《냐야빈두》 주석. 산스크리트 원본이 현존하는 희귀한 사례로 학술적 가치가 높음. 법칭의 인식론을 카슈미르의 외부 실재론 관점에서 재해석. 'Gettier 문제'를 11세기 서양보다 앞서 제기한 사고실험을 포함하고 있어 비교철학 관점에서도 주목받음 (현대 철학자 팀 윌리엄슨 등이 재발견)."
+      },
+    ]
+  },
+
+  /* ══════════════════════════════════
+     VI. 종교적 학파
+  ══════════════════════════════════ */
+  {
+    era: null,
+    sublabel: "종교적 학파 · Religious School — c. 740–850 CE",
+    sublabelType: "religious",
+    entries: [
+      {
+        date: "c. 740–840 CE",
+        dateNote: "Wikipedia: '8–9세기' / Encyclopedia of Buddhism: '740–800 CE' — 학계 이견",
+        name: "Prajñākaragupta",
+        nameKo: "프라즈냐카라굽타",
+        type: "religious", side: "left",
+        desc: "종교적 학파(religious school)의 창시자. 재가신자(upāsaka)로 전해짐. 엘리 프랑코(Eli Franco)는 '디그나가·다르마키르티 이후 가장 중요하고 독창적인 불교 철학자'로 평가. 《프라마나바르티칼람카라(Pramāṇavārttikālaṃkāra, 量評釋莊嚴)》: 법칭 《프라마나바르티카》의 가장 방대한 주석 (16,200 게송 이상). 주요 혁신: ①역방향 인과론(backwards causation) ②지각과 추론의 상호의존성 이론 ③자기인식(svasaṃvedana)을 궁극 유일의 올바른 인식으로 환원하는 불이론적(不二論的) 입장. 이후 라비굽타(Ravigupta, 9세기)가 계승."
+      },
+      {
+        date: "c. 740–840 CE",
+        dateNote: null,
+        name: "Pramāṇavārttikālaṃkāra",
+        nameKo: "프라마나바르티칼람카라 (量評釋莊嚴)",
+        type: "text", side: "right",
+        desc: "Prajñākaragupta의 주저. 16,200 게송이 넘는 역대 최대의 법칭 주석. 단순 주석을 넘어 독창적인 철학적 논변을 전개: 역방향 인과론(bhāvī-kāraṇa), 감각·추론의 상호의존 이론, 불이론적 자기인식론 등. 산스크리트 사본 단 1부만 전해지며 라훌라 상크리티야야나가 1935년 발견. 티베트어 완역 현존 (텐규르 Toh 4221)."
+      },
+    ]
+  },
+
+];
+
+/* ─── 색상 맵 ─── */
+const dateColorClass = {
+  pioneer:     'date-pioneer',
+  founder:     'date-founder',
+  text:        'date-text',
+  commentator: 'date-commentator',
+  kashmir:     'date-kashmir',
+  religious:   'date-religious',
+};
+const badgeLabel = {
+  pioneer:     'Precursor',
+  founder:     'Founder',
+  text:        'Text',
+  commentator: 'Commentator',
+  kashmir:     'Kashmir School',
+  religious:   'Religious School',
+};
+const entryClass = {
+  pioneer:     'pioneer-entry',
+  founder:     'founder-entry',
+  text:        'text-entry',
+  commentator: 'commentator-entry',
+  kashmir:     'kashmir-entry',
+  religious:   'religious-entry',
+};
+const sublabelClass = {
+  commentator: 'sub-commentator',
+  kashmir:     'sub-kashmir',
+  religious:   'sub-religious',
+};
+
+function buildTimeline() {
+  const container = document.getElementById('entries');
+  let delay = 0;
+
+  data.forEach(era => {
+    if (era.era) {
+      const banner = document.createElement('div');
+      banner.className = 'period-banner';
+      banner.innerHTML = `<h3>${era.era}</h3>`;
+      container.appendChild(banner);
+    }
+    if (era.sublabel) {
+      const sc = sublabelClass[era.sublabelType] || '';
+      const sub = document.createElement('div');
+      sub.className = `sub-label ${sc}`;
+      sub.innerHTML = `<span class="sub-inner">${era.sublabel}</span>`;
+      container.appendChild(sub);
+    }
+
+    era.entries.forEach(item => {
+      const entry = document.createElement('div');
+      const ec = entryClass[item.type] || '';
+      entry.className = `entry ${item.side} ${ec}`;
+      entry.style.transitionDelay = `${delay * 55}ms`;
+      delay++;
+
+      const dcClass  = dateColorClass[item.type] || '';
+      const bLabel   = badgeLabel[item.type] || item.type;
+      const noteHtml = item.dateNote
+        ? `<div class="card-date-note">${item.dateNote}</div>` : '';
+
+      const cardHtml = `
+        <div class="card" onclick="this.classList.toggle('open')">
+          <div class="card-date ${dcClass}">${item.date}</div>
+          ${noteHtml}
+          <div class="card-name">${item.name}</div>
+          <div class="card-name-ko">${item.nameKo}</div>
+          <span class="card-type-badge badge-${item.type}">${bLabel}</span>
+          <div class="card-desc">${item.desc}</div>
+          <div class="card-toggle">▸ 자세히 보기</div>
+        </div>`;
+      const nodeHtml = `<div class="node-col"><div class="node ${item.type}"></div></div>`;
+      const spacer   = `<div class="spacer"></div>`;
+
+      entry.innerHTML = item.side === 'left'
+        ? cardHtml + nodeHtml + spacer
+        : spacer + nodeHtml + cardHtml;
+
+      container.appendChild(entry);
+    });
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.entry').forEach(el => observer.observe(el));
+}
+
+buildTimeline();
+</script>
+</body>
+</html>
